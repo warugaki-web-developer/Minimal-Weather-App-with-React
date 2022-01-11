@@ -1,5 +1,5 @@
 {
-  "name": "starter-vite-react",
+  "name": "minimal-weather-app-with-react",
   "version": "1.0.0",
   "engines": {
     "node": "16.13.1"

@@ -1,1 +1,1 @@
-# starter-vite-react
+# Minimal Weather App with React

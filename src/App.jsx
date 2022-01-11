@@ -1,12 +1,11 @@
 import { Global } from '@emotion/react';
 
-import Helloworld from './components/HelloWorld';
 import globalStyle from './styles/global';
 
 const App = () => (
   <>
     <Global styles={globalStyle} />
-    <Helloworld />
+    <h1>Minimal Weather App with React</h1>
   </>
 );
 
