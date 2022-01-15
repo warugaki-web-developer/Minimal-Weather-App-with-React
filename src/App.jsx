@@ -33,6 +33,7 @@ const App = () => {
       <h1>Minimal Weather App with React</h1>
       <div className="weather">
         <p>{weatherData.current_weather.time}</p>
+        <p>OSAKA</p>
         <p>
           <span>{weatherData.current_weather.temperature}</span>
           <span>{weatherData.hourly_units.temperature_2m}</span>
