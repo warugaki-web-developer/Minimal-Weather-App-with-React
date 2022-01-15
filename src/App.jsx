@@ -32,7 +32,7 @@ const App = () => {
     <>
       <Global styles={globalStyle} />
       <div className="weather">
-        <h1 className="app-title">Minimal Weather App with React</h1>
+        <h1 className="weather-app-title">Minimal Weather App with React</h1>
         <div className="weather-header">
           <p className="weather-current-time">
             {format(new Date(weatherData.current_weather.time), 'yyyy.MM.dd p')}
@@ -51,6 +51,17 @@ const App = () => {
           <p className="weather-code">
             {weatherData.current_weather.weathercode}
           </p>
+        </div>
+        <div className="footer">
+          <small>
+            <a
+              href="https://open-meteo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Weather data by Open-Meteo.com
+            </a>
+          </small>
         </div>
       </div>
     </>
