@@ -47,6 +47,10 @@ const weatherStyle = css`
     font-weight: 1000;
   }
 
+  .weather-code {
+    font-size: 1.5rem;
+  }
+
   .weather-app-footer {
     display: flex;
     flex-direction: column;
