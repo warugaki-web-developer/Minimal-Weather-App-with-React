@@ -37,6 +37,7 @@ const App = () => {
           <span>{weatherData.current_weather.temperature}</span>
           <span>{weatherData.hourly_units.temperature_2m}</span>
         </p>
+        <p>{weatherData.current_weather.weathercode}</p>
       </div>
     </>
   );
