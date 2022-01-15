@@ -22,7 +22,8 @@ const weatherStyle = css`
   }
 
   .weather-current-time {
-    color: #6b7280;
+    font-weight: 800;
+    color: #c6c6c6;
   }
 
   .weather-city {
