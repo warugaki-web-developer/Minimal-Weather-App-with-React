@@ -1,12 +1,33 @@
 import { Global } from '@emotion/react';
+import { useEffect, useState } from 'react';
 
 import globalStyle from './styles/global';
 
-const App = () => (
-  <>
-    <Global styles={globalStyle} />
-    <h1>Minimal Weather App with React</h1>
-  </>
-);
+const App = () => {
+  const [weatherData, setWeatherData] = useState();
+
+  useEffect(() => {
+    fetch(
+      `https://api.open-meteo.com/v1/forecast?latitude=34.69374&longitude=135.50218&hourly=temperature_2m&current_weather=true&timezone=Asia%2FTokyo`,
+    )
+      .then((response) => response.json())
+      .then((resopnseJson) => {
+        setWeatherData(resopnseJson);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  return (
+    <>
+      <Global styles={globalStyle} />
+      <h1>Minimal Weather App with React</h1>
+      <div className="weather">
+        <pre>{JSON.stringify(weatherData, null, 2)}</pre>
+      </div>
+    </>
+  );
+};
 
 export default App;
