@@ -1,4 +1,5 @@
 import { Global } from '@emotion/react';
+import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 
 import globalStyle from './styles/global';
@@ -32,7 +33,9 @@ const App = () => {
       <Global styles={globalStyle} />
       <h1>Minimal Weather App with React</h1>
       <div className="weather">
-        <p>{weatherData.current_weather.time}</p>
+        <p>
+          {format(new Date(weatherData.current_weather.time), 'yyyy.MM.dd p')}
+        </p>
         <p>OSAKA</p>
         <p>
           <span>{weatherData.current_weather.temperature}</span>
