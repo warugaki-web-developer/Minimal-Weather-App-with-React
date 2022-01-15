@@ -9,6 +9,36 @@ const App = () => {
   const [weatherData, setWeatherData] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
+  const weatherConditions = [
+    {
+      conditionType: 'sun',
+      conditionCode: [0, 1],
+    },
+    {
+      conditionType: 'cloud',
+      conditionCode: [2, 3, 45, 48],
+    },
+    {
+      conditionType: 'rain',
+      conditionCode: [51, 53, 55, 56, 57, 61, 63, 65, 66, 67],
+    },
+    {
+      conditionType: 'snow',
+      conditionCode: [71, 73, 75, 77, 80, 81, 82, 85, 86],
+    },
+    {
+      conditionType: 'thunderstorm',
+      conditionCode: [95, 96, 99],
+    },
+  ];
+
+  const getConditionType = (code) => {
+    const conditions = weatherConditions.filter((value, index, array) =>
+      value.conditionCode.includes(code),
+    );
+    return conditions[0].conditionType;
+  };
+
   useEffect(() => {
     fetch(
       `https://api.open-meteo.com/v1/forecast?latitude=34.69374&longitude=135.50218&hourly=temperature_2m&current_weather=true&timezone=Asia%2FTokyo`,
@@ -50,7 +80,7 @@ const App = () => {
             </span>
           </p>
           <p className="weather-code">
-            {weatherData.current_weather.weathercode}
+            {getConditionType(weatherData.current_weather.weathercode)}
           </p>
         </div>
         <div className="weather-app-footer">
