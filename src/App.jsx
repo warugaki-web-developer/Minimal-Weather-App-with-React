@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 
 import globalStyle from './styles/global';
+import weatherStyle from './styles/weather';
 
 const App = () => {
   const [weatherData, setWeatherData] = useState();
@@ -31,7 +32,7 @@ const App = () => {
   return (
     <>
       <Global styles={globalStyle} />
-      <div className="weather">
+      <div className="weather" css={weatherStyle}>
         <h1 className="weather-app-title">Minimal Weather App with React</h1>
         <div className="weather-header">
           <p className="weather-current-time">
@@ -52,7 +53,7 @@ const App = () => {
             {weatherData.current_weather.weathercode}
           </p>
         </div>
-        <div className="footer">
+        <div className="weather-app-footer">
           <small>
             <a
               href="https://open-meteo.com/"
