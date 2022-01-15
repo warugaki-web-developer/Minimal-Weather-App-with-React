@@ -11,7 +11,7 @@ const globalStyle = css`
       sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #111827;
+    color: #5b657a;
   }
 
   p {
