@@ -10,12 +10,13 @@ const weatherStyle = css`
   }
 
   .weather-app-title {
+    margin: 0;
     font-size: 1.5rem;
     font-weight: 1000;
   }
 
   .weather-header {
-    padding-top: 0.5rem;
+    padding-top: 2rem;
   }
 
   .weather-current-time {
@@ -54,8 +55,8 @@ const weatherStyle = css`
   .weather-app-footer {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     margin-top: auto;
+    text-align: center;
   }
 
   .weather-app-footer a {
