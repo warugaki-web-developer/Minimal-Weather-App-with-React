@@ -36,7 +36,8 @@ const App = () => {
     const conditions = weatherConditions.filter((value, index, array) =>
       value.conditionCode.includes(code),
     );
-    return conditions[0].conditionType;
+
+    return conditions.length ? conditions[0].conditionType : null;
   };
 
   useEffect(() => {
