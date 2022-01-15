@@ -5,6 +5,7 @@ import globalStyle from './styles/global';
 
 const App = () => {
   const [weatherData, setWeatherData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch(
@@ -16,15 +17,22 @@ const App = () => {
       })
       .catch((error) => {
         console.error(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
       <Global styles={globalStyle} />
       <h1>Minimal Weather App with React</h1>
       <div className="weather">
-        <pre>{JSON.stringify(weatherData, null, 2)}</pre>
+        <p>{weatherData.current_weather.time}</p>
       </div>
     </>
   );
