@@ -31,33 +31,28 @@ const App = () => {
   return (
     <>
       <Global styles={globalStyle} />
-      <main className="main">
-        <h1>Minimal Weather App with React</h1>
-        <div className="weather">
-          <div className="weather-header">
-            <p className="weather-current-time">
-              {format(
-                new Date(weatherData.current_weather.time),
-                'yyyy.MM.dd p',
-              )}
-            </p>
-            <p className="weather-city">OSAKA</p>
-          </div>
-          <div className="weather-body">
-            <p className="weather-temperature">
-              <span className="weather-temperature-text">
-                {weatherData.current_weather.temperature}
-              </span>
-              <span className="weather-temperature-unit">
-                {weatherData.hourly_units.temperature_2m}
-              </span>
-            </p>
-            <p className="weather-code">
-              {weatherData.current_weather.weathercode}
-            </p>
-          </div>
+      <div className="weather">
+        <h1 className="app-title">Minimal Weather App with React</h1>
+        <div className="weather-header">
+          <p className="weather-current-time">
+            {format(new Date(weatherData.current_weather.time), 'yyyy.MM.dd p')}
+          </p>
+          <p className="weather-city">OSAKA</p>
         </div>
-      </main>
+        <div className="weather-body">
+          <p className="weather-temperature">
+            <span className="weather-temperature-text">
+              {weatherData.current_weather.temperature}
+            </span>
+            <span className="weather-temperature-unit">
+              {weatherData.hourly_units.temperature_2m}
+            </span>
+          </p>
+          <p className="weather-code">
+            {weatherData.current_weather.weathercode}
+          </p>
+        </div>
+      </div>
     </>
   );
 };
