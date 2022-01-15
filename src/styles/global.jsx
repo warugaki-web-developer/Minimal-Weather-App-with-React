@@ -9,7 +9,7 @@ const globalStyle = css`
     font-family: Nunito, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     color: #111827;
   }

@@ -4,19 +4,18 @@ const weatherStyle = css`
   & {
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 100vh;
-    padding: 48px;
+    padding: 3rem;
     background: linear-gradient(180deg, #f9fafb 0%, rgb(249 250 251 / 0%) 100%);
   }
 
   .weather-app-title {
-    font-size: 16px;
+    font-size: 1.5rem;
     font-weight: 1000;
   }
 
   .weather-header {
-    padding-top: 48px;
+    padding-top: 0.5rem;
   }
 
   .weather-current-time {
@@ -24,25 +23,27 @@ const weatherStyle = css`
   }
 
   .weather-city {
-    font-size: 48px;
+    padding-top: 0.5rem;
+    font-size: 3rem;
     font-weight: 800;
     line-height: 1;
   }
 
   .weather-body {
+    padding-top: 1rem;
   }
 
   .weather-temperature {
-    font-weight: 800;
     line-height: 1;
   }
 
   .weather-temperature-text {
-    font-size: 96px;
+    font-size: 6rem;
+    font-weight: 800;
   }
 
   .weather-temperature-unit {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 1000;
   }
 
