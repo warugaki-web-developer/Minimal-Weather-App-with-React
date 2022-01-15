@@ -17,6 +17,17 @@ const globalStyle = css`
   p {
     margin: 0;
   }
+
+  .loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.5rem;
+    font-weight: 1000;
+  }
 `;
 
 export default globalStyle;

@@ -57,7 +57,14 @@ const App = () => {
   }, []);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <Global styles={globalStyle} />
+        <div className="loading">
+          <p>Loading...</p>
+        </div>
+      </>
+    );
   }
 
   return (
