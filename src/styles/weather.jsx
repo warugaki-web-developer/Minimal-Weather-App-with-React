@@ -4,8 +4,10 @@ const weatherStyle = css`
   & {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding: 3rem;
+    max-width: 40rem;
+    min-height: 100vh;
+    padding: 1.5rem;
+    margin: auto;
     background: linear-gradient(180deg, #f9fafb 0%, rgb(249 250 251 / 0%) 100%);
   }
 
@@ -20,12 +22,13 @@ const weatherStyle = css`
   }
 
   .weather-current-time {
-    color: #6b7280;
+    font-weight: 800;
+    color: #c6c6c6;
   }
 
   .weather-city {
     padding-top: 0.5rem;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 1;
   }
@@ -55,6 +58,7 @@ const weatherStyle = css`
   .weather-app-footer {
     display: flex;
     flex-direction: column;
+    padding-top: 1rem;
     margin-top: auto;
     text-align: center;
   }

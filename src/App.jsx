@@ -2,6 +2,7 @@ import { Global } from '@emotion/react';
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 
+import WeatherIcon from './components/WeatherIcon';
 import globalStyle from './styles/global';
 import weatherStyle from './styles/weather';
 
@@ -79,6 +80,11 @@ const App = () => {
           <p className="weather-city">OSAKA</p>
         </div>
         <div className="weather-body">
+          <WeatherIcon
+            conditionType={getConditionType(
+              weatherData.current_weather.weathercode,
+            )}
+          />
           <p className="weather-temperature">
             <span className="weather-temperature-text">
               {weatherData.current_weather.temperature}
