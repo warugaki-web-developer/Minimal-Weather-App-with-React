@@ -1,0 +1,19 @@
+name: project deploy
+
+on:
+  push:
+    branches: [ main ]
+  paths:
+    - 'dist/*'
+
+jobs:
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+      - uses: actions/checkout@v2
+      
+      - name: deploy
+        run: git subtree push --prefix dist origin gh-pages
