@@ -72,7 +72,10 @@ const App = () => {
     <>
       <Global styles={globalStyle} />
       <div className="weather" css={weatherStyle}>
-        <h1 className="weather-app-title">Minimal Weather App with React</h1>
+        <h1 className="weather-app-title">
+          Minimal Weather App
+          <br /> with React
+        </h1>
         <div className="weather-header">
           <p className="weather-current-time">
             {format(new Date(weatherData.current_weather.time), 'yyyy.MM.dd p')}
